@@ -490,3 +490,13 @@ body {
   width: 25px;
   height: 30px;
 }
+/*---------------------------knowledge----------------------------*/
+
+.content--knowledge {
+  justify-content: space-between;
+}
+
+.education,
+.languages {
+  text-align: center;
+}
