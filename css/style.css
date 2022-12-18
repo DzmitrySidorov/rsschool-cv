@@ -94,13 +94,6 @@ body {
   color: var(--body-text-color);
 }
 
-.wrapper {
-  min-height: 100vh;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
 .container {
   max-width: 1470px;
   margin: 0px auto;
@@ -158,4 +151,202 @@ body {
 .logo:hover,
 .logo:focus {
   text-shadow: #fff 1px 1px 2px, 0 0 5px;
+}
+
+/*-------------------------------------------main----------------------------------------------------------*/
+
+.main {
+  flex: 1 1 auto;
+  margin-top: var(--header-height);
+  width: 100%;
+  background: var(--main-color);
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--content-color);
+  padding-bottom: 15px;
+}
+
+.content:not(:last-child)::before {
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  content: "";
+  width: 60%;
+  height: 2px;
+  background-color: var(--content-color);
+}
+
+.content:not(:last-child)::after {
+  position: absolute;
+  top: calc(100% - 5px);
+  left: calc(50% - 5px);
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--content-color);
+  transform: rotate(45deg);
+}
+
+.content__inner {
+  flex-direction: row;
+  flex: 1 1 33.3333%;
+  margin: 0 auto;
+  padding: 5px 15px;
+}
+
+.title {
+  position: relative;
+  margin-top: 25px;
+  padding: 5px 0px;
+  display: inline-block;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 50px;
+}
+
+.text {
+  margin-top: 15px;
+  padding: 5px;
+  font-size: 1.35em;
+}
+
+.icon {
+  margin-right: 10px;
+  color: var(--icon-color);
+}
+
+.button {
+  display: inline-block;
+  max-width: 200px;
+  max-height: 50px;
+  padding: 0 10px;
+  line-height: 2;
+  font-size: 1.4em;
+}
+
+.button__text {
+  display: inline-block;
+  position: relative;
+  padding: 0px 10px 0px 30px;
+  z-index: 3;
+}
+
+.button__text::before {
+  font-family: "icomoon";
+  content: "\f019";
+  position: absolute;
+  left: 0px;
+  transition: all 0.3s;
+  transition-delay: 0.1s;
+}
+
+.button__text:hover:before {
+  transform: translateY(6px);
+  color: white;
+}
+
+/*-----------------------------------------personal---------------------------------------*/
+
+.hero {
+  order: 2;
+  text-align: center;
+}
+
+.summary {
+  order: 1;
+}
+
+.contacts {
+  order: 3;
+}
+
+/*-----------------------hero------------------------------*/
+
+.hero__title {
+  margin-top: 5px;
+}
+
+.hero__subtitle {
+  margin-top: 5px;
+  font-size: 1.45em;
+}
+
+.hero__photo {
+  display: block;
+  margin: 30px auto 0;
+  max-width: 65%;
+  border-radius: 10%;
+}
+
+.hero__button {
+  margin: 20px 0;
+  color: var(--content-color);
+  border: var(--content-color) solid 1px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__button:hover {
+  color: white;
+}
+
+.hero__button::before,
+.hero__button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--content-color);
+  left: -100%;
+  top: 0;
+  opacity: 0.1;
+  text-align: center;
+  transition: all 0.3s;
+  z-index: 0;
+}
+
+.hero__button::after {
+  opacity: 0.4;
+  transition-delay: 0.2s;
+  z-index: 2;
+}
+
+.hero__button:hover::before,
+.hero__button:hover:after {
+  left: 0;
+}
+
+/*-----------------------contacts------------------------------*/
+
+.contacts__list {
+  margin-top: 15px;
+  font-size: 1.35em;
+}
+
+.contacts__item:not(:last-child) {
+  padding-bottom: 5px;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: var(--content-color);
+}
+
+.contacts__link:hover {
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--content-color),
+    0 0 10px var(--content-color);
 }
