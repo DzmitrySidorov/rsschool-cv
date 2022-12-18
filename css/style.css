@@ -350,3 +350,143 @@ body {
   text-shadow: 0 0 5px var(--content-color),
     0 0 10px var(--content-color);
 }
+
+/*-------------------Code---------------------*/
+
+.code__text,
+.projects__text {
+  margin-top: 5px;
+  font-size: 1.25em;
+  text-align: justify;
+}
+
+.code__example {
+  margin: 10px 0px 15px;
+  padding: 5px;
+  display: block;
+  font-size: 1.15em;
+}
+
+.js-keywords {
+  color: rgb(193, 103, 49);
+}
+
+.js__function {
+  color: rgb(98, 164, 217);
+}
+
+.bracket-purple {
+  color: rgb(218, 99, 150);
+}
+
+.bracket-yellow {
+  color: yellow;
+}
+
+.code__margin-1 {
+  display: block;
+  margin-left: 15px;
+}
+
+.code__margin-2 {
+  display: block;
+  margin-left: 30px;
+}
+
+/*-------------------------skills-------------------------*/
+
+.skills__list {
+  margin-top: 10px;
+  padding: 5px 10px 5px 5px;
+  display: block;
+  font-size: 1.4em;
+}
+
+.skills__item:not(:first-child) {
+  margin-top: 30px;
+}
+
+.level {
+  margin-top: 5px;
+  width: 100%;
+  height: 10px;
+  background-color: grey;
+}
+
+.level__aсtual {
+  display: block;
+  height: 10px;
+  background-color: white;
+}
+
+.level__actual--html {
+  max-width: 80%;
+}
+
+.level__actual--css {
+  max-width: 72%;
+}
+
+.level__actual--vs {
+  max-width: 55%;
+}
+
+.level__actual--git {
+  max-width: 60%;
+}
+
+/*--------------------projects--------------------------*/
+
+.projects__link {
+  margin: 10px;
+  display: block;
+}
+
+.projects__link:hover {
+  transform: scale(1.1);
+}
+
+.projects__img {
+  display: block;
+  margin: 15px auto;
+  max-width: 75%;
+}
+
+.project__button {
+  display: block;
+  margin: 25px auto;
+  position: relative;
+  text-align: center;
+  color: rgb(183, 183, 183);
+  font-size: 1.2em;
+  letter-spacing: 1px;
+  background-color: rgb(8, 8, 8);
+  border-radius: 10px;
+  box-shadow: -1px 2px 5px grey;
+}
+
+.project__button::before {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 0;
+  right: 0;
+  border-radius: 5px;
+  background: linear-gradient(225deg,
+      rgb(100, 100, 100) 45%,
+      rgb(85, 85, 85) 52%,
+      rgb(170, 170, 170) 56%,
+      rgb(183, 183, 183));
+  transition: all 0.3s;
+}
+
+.project__button:hover {
+  box-shadow: 0 0 10px rgb(183, 183, 183), 0 0 20px rgb(183, 183, 183),
+    0 0 50px rgb(183, 183, 183), 0 0 70px rgb(183, 183, 183);
+}
+
+.project__button:hover:before {
+  width: 25px;
+  height: 30px;
+}
